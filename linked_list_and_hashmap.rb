@@ -19,6 +19,7 @@ class LinkedList
         @tail = tail
     end
 
+    # add a node to the end of the list
     def append(value)
         if @head == nil
             @head = Node.new(value)
@@ -28,7 +29,7 @@ class LinkedList
             @tail = @tail.next_node
         end
     end
-
+    # add a node to the beginning of the list
     def prepend(value)
         if @head == nil
             @head = Node.new(value)
@@ -37,7 +38,7 @@ class LinkedList
             @head = Node.new(value, @head)
         end
     end
-
+    # add a node at a specific index
     def size
         if @head == nil
             return 0
@@ -51,7 +52,7 @@ class LinkedList
             return count
         end
     end
-
+    
     def head
         return @head
     end
